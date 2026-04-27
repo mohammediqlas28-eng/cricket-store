@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cricket Store</title>
+</head>
+<body>
+
+<h1>🏏 Cricket Merchandise Store</h1>
+
+{% for product in products %}
+    <div>
+        <h3>{{ product.name }}</h3>
+        <p>Price: ₹{{ product.price }}</p>
+        <button onclick="alert('Added to cart!')">Add to Cart</button>
+    </div>
+{% endfor %}
+
+<br>
+<button onclick="alert('Payment Successful!')">Checkout</button>
+
+</body>
+</html>
