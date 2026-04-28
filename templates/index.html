@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cricket Store</title>
+</head>
+<body>
+
+<h1>🏏 Cricket Merchandise Store</h1>
+
+{% for product in products %}
+<div class="card">
+    <h3>{{ product.name }}</h3>
+
+    <img src="{{ url_for('static', filename='images/' + product.image) }}" width="150">
+
+    <p>Price: ₹{{ product.price }}</p>
+
+    <a href="/add/{{ product.id }}">
+        <button>Add to Cart</button>
+    </a>
+</div>
+{% endfor %}
+
+<br>
+<a href="/cart"><button>Checkout</button></a>
+
+</body>
+</html>
