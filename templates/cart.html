@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,4 +25,27 @@
 </a>
 
 </body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+</head>
+<body style="text-align:center; font-family:Arial;">
+
+<h2>🛒 Your Cart</h2>
+
+{% for item in items %}
+    <p>{{ item.name }} - ₹{{ item.price }}</p>
+{% endfor %}
+
+<h3>Total: ₹{{ total }}</h3>
+
+<button onclick="alert('Payment Successful!')">Checkout</button>
+
+<br><br>
+<a href="/">⬅ Back to Home</a>
+
+</body>
+>>>>>>> f2def2eb50f81efaf35c214041783eb7ec887f4e
 </html>
