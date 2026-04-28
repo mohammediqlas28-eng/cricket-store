@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,34 +5,7 @@
 </head>
 <body>
 
-<h1>🛒 Your Cart</h1>
-
-<a href="/">Back to Store</a>
-<hr>
-
-{% for item in items %}
-    <h3>{{ item.name }}</h3>
-    <img src="{{ url_for('static', filename='images/' + item.image) }}" width="120">
-    <p>₹{{ item.price }}</p>
-    <hr>
-{% endfor %}
-
-<h2>Total: ₹{{ total }}</h2>
-
-<a href="/checkout">
-    <button>Checkout</button>
-</a>
-
-</body>
-=======
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Cart</title>
-</head>
-<body style="text-align:center; font-family:Arial;">
-
-<h2>🛒 Your Cart</h2>
+<h2>Your Cart</h2>
 
 {% for item in items %}
     <p>{{ item.name }} - ₹{{ item.price }}</p>
@@ -41,11 +13,13 @@
 
 <h3>Total: ₹{{ total }}</h3>
 
-<button onclick="alert('Payment Successful!')">Checkout</button>
+<br>
+<a href="/checkout">
+    <button>Checkout</button>
+</a>
 
 <br><br>
-<a href="/">⬅ Back to Home</a>
+<a href="/">⬅ Back to Shop</a>
 
 </body>
->>>>>>> f2def2eb50f81efaf35c214041783eb7ec887f4e
 </html>
